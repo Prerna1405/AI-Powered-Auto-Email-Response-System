@@ -1,0 +1,4 @@
+ALTER TABLE auto_replies
+  ADD COLUMN IF NOT EXISTS delivery_method VARCHAR(20) DEFAULT 'simulator',
+  ADD COLUMN IF NOT EXISTS real_delivered BOOLEAN DEFAULT FALSE,
+  ADD COLUMN IF NOT EXISTS delivery_error TEXT;
